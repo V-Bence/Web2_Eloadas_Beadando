@@ -6,6 +6,7 @@
 <nav id="mainMenu">
     <a href="{{ route('fooldal') }}">Főoldal</a>
     <a href="{{ route('adatbazis') }}">Adatbázis</a>
+    <a href="{{ route('diagram') }}">Diagram</a>
     <a href="{{ route('crud.index') }}">CRUD</a>
 </nav>
 
