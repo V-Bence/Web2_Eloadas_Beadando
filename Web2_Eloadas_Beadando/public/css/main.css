@@ -1799,3 +1799,96 @@ th.errorcolumm, td.errorcolumm {
     margin-left: auto;
     margin-right: auto;
 }
+.kapcsolat-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.kapcsolat-container form input,
+.kapcsolat-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+.kapcsolat-container button {
+    padding: 10px 20px;
+    border: 1px solid #888;
+    background: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.kapcsolat-container button:hover {
+    background: #444;
+}
+
+/* Container stílus */
+#uzenetek-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+#uzenetek-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#uzenetek-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#uzenetek-container th {
+    padding: 12px 15px;
+    background: #3a3a3a;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #555;
+}
+
+#uzenetek-container td {
+    padding: 10px 15px;
+    border: 1px solid #555;
+}
+
+#uzenetek-container tr:nth-child(even) {
+    background: #2f2f2f;
+}
+
+#uzenetek-container tr:hover {
+    background: #3b3b3b;
+}
+
+
+@media (max-width: 768px) {
+    #uzenetek-container table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
