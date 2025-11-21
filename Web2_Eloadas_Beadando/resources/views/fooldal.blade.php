@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<a id="back" href="{{ route('home') }}">Vissza</a>
 <h1 id="maintitle">Főoldal</h1>
 <br>
 <p>

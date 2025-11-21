@@ -25,12 +25,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/diagram', [DiagramController::class, 'index'])->name('diagram');
 
     // CRUD Pilota
-    Route::get('/crud', [PilotaCrudController::class, 'index'])->name('crud.index');
-    Route::get('/crud/create', [PilotaCrudController::class, 'create'])->name('crud.create');
-    Route::post('/crud', [PilotaCrudController::class, 'store'])->name('crud.store');
-    Route::get('/crud/{az}/edit', [PilotaCrudController::class, 'edit'])->name('crud.edit');
-    Route::put('/crud/{az}', [PilotaCrudController::class, 'update'])->name('crud.update');
-    Route::delete('/crud/{az}', [PilotaCrudController::class, 'destroy'])->name('crud.destroy');
+    Route::get('/crud', [PilotaCrudController::class, 'index'])->name('pilotak.index');
+    Route::get('/crud/create', [PilotaCrudController::class, 'create'])->name('pilotak.create');
+    Route::post('/crud', [PilotaCrudController::class, 'store'])->name('pilotak.store');
+    Route::get('/crud/{pilota}/edit', [PilotaCrudController::class, 'edit'])->name('pilotak.edit');
+    Route::put('/crud/{pilota}', [PilotaCrudController::class, 'update'])->name('pilotak.update');
+    Route::delete('/crud/{pilota}', [PilotaCrudController::class, 'destroy'])->name('pilotak.destroy');
 });
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])
@@ -53,5 +53,5 @@ Route::post('/register', [RegisteredUserController::class, 'store'])
 
 // Admin menü
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 });

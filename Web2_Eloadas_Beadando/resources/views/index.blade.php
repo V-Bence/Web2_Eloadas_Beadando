@@ -7,7 +7,7 @@
     <a href="{{ route('fooldal') }}">Főoldal</a>
     <a href="{{ route('adatbazis') }}">Adatbázis</a>
     <a href="{{ route('diagram') }}">Diagram</a>
-    <a href="{{ route('crud.index') }}">CRUD</a>
+    <a href="{{ route('pilotak.index') }}">CRUD</a>
 </nav>
 
 <div id="userMenu">
@@ -19,14 +19,20 @@
     @auth
         <a href="{{ route('uzenetek') }}">Üzenetek</a>
         <a href="{{ route('kapcsolat') }}">Kapcsolat</a>
+        
+
+        @if(auth()->user()->role === 'admin')
+           <a href="{{ route('admin') }}">Admin</a>
+        @endif
+    @endauth
+</div>
+
+<div class="logout-wrapper">
+            @auth
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit">Kijelentkezés</button>
         </form>
-
-        @if(auth()->user()->role === 'admin')
-           <a href="{{ route('admin.index') }}">Admin</a>
-        @endif
-    @endauth
-</div>
+        @endauth
+        </div>
 @endsection
